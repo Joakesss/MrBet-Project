@@ -33,7 +33,7 @@ export default function Header() {
         </a>
 
         <nav className="nav">
-          <a href="#registrarse">Registrarse</a>
+          <a href="https://mrbetarg.com">Registrarse</a>
           <a href="#beneficios">Beneficios</a>
           <a href="#como-funciona">Como Funciona</a>
         </nav>

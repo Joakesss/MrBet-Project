@@ -1,7 +1,7 @@
 import "./Cards.css"
 import iso from "../assets/isoMrBet.png"
 
-function Cards({ imagen, titulo, descripcion, textoBoton, variable, arrow}) {
+function Cards({ imagen, titulo, descripcion, linkBoton, textoBoton, variable, arrow}) {
     return (
 
         <div className={`carta ${variable}`}>
@@ -27,13 +27,13 @@ function Cards({ imagen, titulo, descripcion, textoBoton, variable, arrow}) {
                     <p className = "carta-descripcion">
                         {descripcion}
                     </p>
-
-                    <button className = "carta-boton">
-                        
-                        <span className="texto">{textoBoton}</span>
-                        <span className="arrow">{arrow}</span>
-                    </button>
-
+                    <a className="carta-link" href={linkBoton}>
+                        <button className = "carta-boton">
+                            
+                            <span className="texto">{textoBoton}</span>
+                            <span className="arrow">{arrow}</span>
+                        </button>
+                    </a>
                 </div>
 
             </div>

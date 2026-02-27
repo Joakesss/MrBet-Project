@@ -57,13 +57,15 @@ function Footer(){
                         provincia
                     </a>
                 </div>
-
-                <div className = "empezarCard">
-                    <h3>Empezar</h3>
-                    <p>Elegí tu provincia para ver opciones disponibles</p>
-                    <span className ="arrow">→</span>
-                </div>
-
+                <a href="https://mrbetarg.com">
+                    <div className = "empezarCard">
+                        
+                        <h3>Empezar</h3>
+                        <p>Elegí tu provincia para ver opciones disponibles</p>
+                        <span className ="arrow">→</span>
+                        
+                    </div>
+                </a>
                 <nav className = "footer-nav">
                     {footerLinks.map((section)=>(
                         <div key={section.title} className="footer-column">

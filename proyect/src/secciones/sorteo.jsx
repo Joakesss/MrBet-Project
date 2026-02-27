@@ -30,11 +30,13 @@ function Sorteo(){
                         Por registrarte en un casino legal a través de nuestros
                         links, participas instantaneamente por un Peugeot 208
                     </p>
-
+                    <a href="https://mrbetarg.com">
                     <button className="sorteo-boton">
                         <span className="botonTexto">Quiero registrarme</span>
                         <span className="arrow">↘</span>
                     </button>
+                    </a>
+
                 </div>
                 
             </div>

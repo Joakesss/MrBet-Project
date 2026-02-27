@@ -13,10 +13,12 @@ function Beneficios(){
                     </h1>
                     <p className="parrafoBeneficios">El club de beneficios para usuarios de casinos legales</p>
                     <div className="beneficios-cta">
+                        <a href="https://mrbetarg.com">
                         <button className="botonBeneficios">
                             <span>Quiero registrarme</span>
                             <span className="arrow">↘</span>
                         </button>
+                        </a>
                     </div>
                     <p className="beneficios-legal">+18 · JUGÁ RESPONSABLEMENTE</p>
                 </div>

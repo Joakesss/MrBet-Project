@@ -15,6 +15,7 @@ function CardsSection(){
                 imagen = {beneficiosImagen}
                 titulo="¿Buscás beneficios?"
                 descripcion="Si ya estás registrado, ingresá directamente."
+                linkBoton=""
                 arrow="↘"
                 textoBoton="Ingresar a beneficios"
                 variable="primary"
@@ -28,6 +29,7 @@ function CardsSection(){
                 imagen = {registroImagen}
                 titulo = "¿Querés registrarte?"
                 descripcion = "Elegí el casino y tu provincia."
+                linkBoton="https://mrbetarg.com"
                 arrow=""
                 textoBoton = "Registrarme ahora"
                 variable = "secondary"
