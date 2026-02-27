@@ -1,4 +1,4 @@
-import "./Sorteo.css";
+import "./sorteo.css";
 import autoIcon from "../assets/auto.png"
 
 function Sorteo(){
