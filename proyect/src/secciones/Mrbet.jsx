@@ -1,6 +1,6 @@
 import "./Mrbet.css"
 import quienSomos from "../assets/quienesSomos.png"
-import background from "../assets/fondoMrBet.png"
+import background from "../assets/fondoMrbet.png"
 function Mrbet(){
     return(
         <section className="quienesomos">
