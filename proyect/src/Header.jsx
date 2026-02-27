@@ -1,42 +1,43 @@
 import "./Header.css";
-import logo from "./assets/logoCompleto.svg"
-import { useEffect, useState } from "react";
+import logo from "./assets/logoCompleto.svg";
+import { useEffect, useRef, useState } from "react";
 
 export default function Header() {
   const [hidden, setHidden] = useState(false);
-  const [lastScroll, setLastScroll] = useState(0);
+  const lastScroll = useRef(0);
 
   useEffect(() => {
+    const scroller = document.scrollingElement;
+
     const handleScroll = () => {
-      if (window.scrollY > lastScroll && window.scrollY > 100) {
-        setHidden(true); // baja → ocultar
+      const currentScroll = scroller.scrollTop;
+
+      if (currentScroll > lastScroll.current && currentScroll > 100) {
+        setHidden(true);  // bajando
       } else {
-        setHidden(false); // sube → mostrar
+        setHidden(false); // subiendo
       }
-      setLastScroll(window.scrollY);
+
+      lastScroll.current = currentScroll;
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScroll]);
+    scroller.addEventListener("scroll", handleScroll, { passive: true });
+    return () => scroller.removeEventListener("scroll", handleScroll);
+  }, []);
 
-    return(
+  return (
     <header className={`header ${hidden ? "header--hidden" : ""}`}>
       <div className="header-container">
-
-        
-        <a href="home" className = "logo">
+        <a href="#home" className="logo">
           <img src={logo} alt="Logo completo" className="logo-completo" />
         </a>
 
-        
         <nav className="nav">
           <a href="#registrarse">Registrarse</a>
           <a href="#beneficios">Beneficios</a>
           <a href="#como-funciona">Como Funciona</a>
         </nav>
-
       </div>
     </header>
-    );
+  );
 }
