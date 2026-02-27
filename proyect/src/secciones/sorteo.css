@@ -1,0 +1,140 @@
+
+
+.sorteo {
+  font-family: Inter;
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto 200px auto;
+  height: 333px;
+  padding: 60px 0 100px 0;
+  
+}
+
+.sorteo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 50px;
+
+  border-radius: 25px;
+
+  background: url("../assets/fondoSorteo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-color: #3b281b;
+  border-width: 1px;
+  border-style: solid;
+
+  position: relative;
+  overflow: hidden;
+
+}
+
+/* imagen */
+
+.sorteo-conteiner-auto {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sorteo-auto {
+
+  width: 100%;
+  max-width: 553px;
+  position: relative;
+  z-index: 1;
+}
+
+/* contenido */
+
+.sorteo-contenido {
+  color: white;
+  margin: 0 0 0 550px;
+}
+
+.sorteo-badge {
+  font-size: 12px;
+  color: #ffb366;
+  letter-spacing: 1px;
+}
+
+.sorteo-titulo {
+  font-size: 42px;
+  margin: 10px 0;
+}
+
+.highlight {
+  color: #ff8c00;
+}
+
+.sorteo-descripcion {
+  color: #aaa;
+  margin-bottom: 20px;
+  max-width: 400px;
+}
+
+/* botón */
+
+.sorteo-boton:hover {
+  transition: 0.3s; transform: translateY(-2px);
+}
+.sorteo-boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  width: 215px;
+
+  background: linear-gradient(213.69deg, #FF9C42 15.29%, #98330D 83.46%);
+  border-radius: 15px;
+  
+
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: -1px;
+
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  position: relative; 
+    overflow: hidden; 
+    z-index: 1; 
+    transition: color 0.3s ease; 
+  }
+
+  .sorteo-boton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #E35E0C; 
+    z-index: -1; 
+    opacity: 0; 
+    transition: color 0.7s ease,
+  }
+
+  .sorteo-boton:hover {
+    color: #FFFFFF; 
+  }
+
+  .sorteo .sorteo-boton:hover::before {
+    opacity: 1; 
+  }
+  .sorteo-boton .arrow {
+    margin: 0;
+    font-size: 18px;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin-left: 6px;
+  }
+
+  .sorteo .sorteo-boton:hover .arrow {
+    color: #FFFFFF;
+    transform: rotate(-45deg);
+  }

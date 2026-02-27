@@ -1,0 +1,282 @@
+
+.carta.primary {
+  font-family: Inter;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding: 30px;
+
+  width: 600px;
+  min-width: 420px;
+  max-width: 800px;
+  height: 575px;
+
+  background: #1E1611;
+  border-radius: 40px;
+
+  position: relative;
+  overflow: hidden;
+ 
+  transition: all 0.35s ease;
+}
+
+/*animacion*/
+.carta.primary.pri > *{
+  position: relative;
+  z-index: 2;
+}
+
+.carta.primary::before{
+  content:"";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at bottom center, 
+    #e65c00 0%,              
+    #1d0a02 55%,             
+    #0a0402 100%             
+  );
+
+  
+
+  opacity: 0;
+  transition: opacity 0.35s ease;
+
+  z-index: 1;
+}
+
+.carta.primary:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(255,140,0,0.15);
+}
+
+.carta.primary:hover::before{
+  opacity: 1;
+}
+
+.carta.secondary {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 600px;
+min-width: 420px;
+max-width: 800px;
+height: 575px;
+
+padding: 30px;
+
+border: 1px solid #1D1D1D;
+border-radius: 40px;
+  position: relative;
+  overflow:hidden;
+  background:transparent;
+transition: transform 0.35s ease, box-shadow 0.35s; 
+transform: translateY(0)
+
+}
+
+.carta.secondary:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(255,140,0,0.15);
+
+}
+
+.carta.secondary::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* color sólido, sin transparencia */
+  background: #0A0705;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.carta.secondary:hover::before{
+  opacity: 1;
+}
+
+.carta.secondary > *{
+  position: relative;
+  z-index: 2;
+}
+
+.carta-fondo {
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/isoMrBet.png");
+  background-size: 110%;
+  background-position: right -50px top -120px; 
+  background-repeat: no-repeat;
+  z-index: 0;  
+  opacity: 0.10;
+}
+
+
+.carta.secondary .carta-fondo{
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/isoMrBet.png");
+  background-size: 154%;
+  background-position: right -350px top -390px; 
+  background-repeat: no-repeat;
+  z-index: 0;
+  filter: grayscale(100%) brightness(0);  
+  opacity: 34%;
+  mix-blend-mode: color-burn;
+}
+
+
+
+.carta-imagen {
+
+  object-fit: cover;
+
+  border-radius: 15px;
+
+width: 528px;
+height: 296px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(image.png);
+border-radius: 20px;
+
+}
+
+.carta-contenido {
+
+   position: relative;
+  z-index: 1;
+}
+
+.carta-texto {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 18px;
+height: 100%;
+}
+
+.carta-titulo {  
+  margin: 16px 0 0 0;;
+font-family: Inter;
+font-weight: 300;
+font-size: 42px;
+line-height: 57px;
+letter-spacing: -0.02em;
+
+color: #FFFFFF;
+}
+
+.carta-descripcion {
+
+  margin:0;
+font-family: Inter;
+font-weight: 300;
+font-size: 18px;
+line-height: 20px;
+color: #BBA591;
+
+}
+
+.carta-boton {
+margin-top:20px;
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 15px;
+width: 215px;
+
+background: linear-gradient(213.69deg, #FF9C42 15.29%, #98330D 83.46%);
+border-radius: 15px;
+
+
+font-family: Inter;
+font-weight: 400;
+font-size: 18px;
+letter-spacing: -1px;
+
+color: white;
+
+border:none;
+cursor: pointer;
+position: relative; 
+  overflow: hidden; 
+  z-index: 1; 
+  transition: color 0.3s ease; 
+}
+
+.carta-boton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #E35E0C; 
+  z-index: -1; 
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+}
+
+.carta.primary .carta-boton:hover {
+  color: #FFFFFF; 
+}
+
+.carta.primary .carta-boton:hover::before {
+  opacity: 1; 
+}
+
+.carta.secondary .carta-boton{
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 15px ;
+
+width: 215px;
+height: auto;
+
+background: rgba(0, 0, 0, 0.5);
+border: 1px solid #502A0E;
+border-radius: 15px;
+
+
+font-family: Inter;
+font-weight: 400;
+font-size: 18px;
+line-height: 20px;
+text-align: center;
+letter-spacing: -1px;
+
+color: #FAD4B2;
+
+cursor: pointer;
+transition: background-color 0.7s ease, color 0.7s ease;
+}
+
+.carta.secondary .carta-boton:hover {
+  background-color: #3D1600; 
+  color: #FAD5B3; 
+}
+.carta-primary .carta-boton:hover .arrow{
+   color: white;
+}
+
+.arrow {
+  font-size: 18px;
+  color: white;
+  transition: color 0.7s ease;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  margin: 0 auto;
+}
+
+.carta-boton:hover .arrow {
+  color: #FFFFFF;
+  transform: rotate(-45deg);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}

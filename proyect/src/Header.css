@@ -1,0 +1,50 @@
+
+.header {
+  font-family: Inter;
+  position: fixed;
+  top: 0 ;
+  width: 100%;
+  transition: top 0.3s;
+  z-index: 1000;
+  padding: 20px 0;
+  height: 80px;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.header--hidden {
+  transform: translateY(-200%);
+}
+
+
+.header-container {
+  margin: 0 auto;
+  width: 1280px;
+  padding: 16px 24px 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.30);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+}
+
+
+.logo-completo {
+  height: 80%;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  gap: 36px;
+}
+
+.nav a {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none !important;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.nav a:hover {
+  color: white;
+}

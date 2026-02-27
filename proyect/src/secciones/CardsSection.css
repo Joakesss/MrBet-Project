@@ -1,0 +1,14 @@
+/*Chatgpt*/
+
+.carta-seccion {
+  font-family: Inter;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 1200px;
+  height: 500px; 
+  position:relative;
+
+  margin: 133px auto;
+
+}
